@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+}
+
+.container {
+    width: 70%;
+    height: 100%;
+    background: #fff;
+    border-radius: 14px;
+    margin: 10% 15%;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title h1 {
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: #361DF0;
+    margin-top: 50px;
+}
+
+.car {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 50px auto;
+    margin: 65px 80px;
+}
+
+.leftside, .rightside {
+    min-height: 400px;
+    padding: 12px;
+    position: relative;
+    border: 3px solid #2C92F0;
+    border-radius: 5px;
+}
+
+.products-box {
+    box-sizing: border-box;
+    position: relative;
+    color: #375BED;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 30px 30px;
+}
+
+.products-box select, .amount-box input {
+    background-color: #fff;
+    border: 1px solid #375BED;
+    color: #555;
+    margin: 15px 0;
+    padding: 15px 15px;
+    font-size: 13px;
+    border-radius: 8px;
+    width: 90%;
+    outline: none;
+    font-weight: 400;
+}
+
+.amount-box {
+    box-sizing: border-box;
+    position: relative;
+    color: #375BED;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.amount-box button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    margin: 10px 15px;
+    cursor: pointer;
+}
+
+.adicionar {
+    background-color: #3795ED;
+    color: #fff;
+    font-weight: 500;
+
+}
+
+.adicionar:hover {
+    background-color: #78F0DD;
+    color: #555;
+    transition: 0.3s ease;
+}
+
+.limpar {
+    color: #fff;
+    font-weight: 500;
+    background-color: #78F0C3;
+}
+
+.limpar:hover {
+    background-color: #eee;
+    color: #5ac9a0;
+    transition: 0.3s ease;
+}
+
+.products-car {
+    box-sizing: border-box;
+    position: relative;
+    color: #375BED;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 30px 30px;
+
+}
+
+.products-car h2 {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 2px solid #375BED;
+}
