@@ -9,12 +9,14 @@
 
 body {
     height: 100vh;
-    background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+    background-image: url(img/hacker.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .container {
     width: 70%;
-    height: 100%;
+    height: 90vh;
     background: #fff;
     border-radius: 14px;
     margin: 10% 15%;
@@ -22,15 +24,22 @@ body {
 
 .title {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    width: 50%;
+    margin: auto;
 }
 
 .title h1 {
     text-align: center;
     font-size: 35px;
-    text-transform: uppercase;
-    color: #361DF0;
+    color: #26561D;
+    margin-top: 50px;
+}
+.material-symbols-outlined{
+    text-align: center;
+    font-size: 35px;
+    color: #26561D;
     margin-top: 50px;
 }
 
@@ -43,17 +52,17 @@ body {
 }
 
 .leftside, .rightside {
-    min-height: 400px;
+    /*min-height: 400px;*/
     padding: 12px;
     position: relative;
-    border: 3px solid #2C92F0;
+    border: 3px solid #73A979;
     border-radius: 5px;
 }
 
 .products-box {
     box-sizing: border-box;
     position: relative;
-    color: #375BED;
+    color: #407233;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
@@ -62,8 +71,8 @@ body {
 
 .products-box select, .amount-box input {
     background-color: #fff;
-    border: 1px solid #375BED;
-    color: #555;
+    border: 1px solid #407233;
+    color: #233420;
     margin: 15px 0;
     padding: 15px 15px;
     font-size: 13px;
@@ -76,13 +85,13 @@ body {
 .amount-box {
     box-sizing: border-box;
     position: relative;
-    color: #375BED;
+    color: #407233;
     justify-content: center;
     align-items: center;
     padding: 10px 30px;
 }
 
-.amount-box button {
+button {
     border: none;
     border-radius: 8px;
     padding: 10px 25px;
@@ -91,34 +100,34 @@ body {
 }
 
 .adicionar {
-    background-color: #3795ED;
-    color: #fff;
+    background-color: #619761;
+    color: #eee;
     font-weight: 500;
 
 }
 
 .adicionar:hover {
-    background-color: #78F0DD;
-    color: #555;
+    background-color: #eee;
+    color: #407233;
     transition: 0.3s ease;
 }
 
 .limpar {
-    color: #fff;
+    color: #eee;
     font-weight: 500;
-    background-color: #78F0C3;
+    background-color: #407233;
 }
 
 .limpar:hover {
     background-color: #eee;
-    color: #5ac9a0;
+    color: #619761;
     transition: 0.3s ease;
 }
 
 .products-car {
     box-sizing: border-box;
     position: relative;
-    color: #375BED;
+    color: #407233;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
@@ -129,5 +138,5 @@ body {
 .products-car h2 {
     text-align: center;
     padding: 15px;
-    border-bottom: 2px solid #375BED;
+    border-bottom: 2px solid #407233;
 }
