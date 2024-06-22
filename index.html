@@ -20,7 +20,7 @@
             <div class="leftside">
                 <div class="products-box">
                     <h2>Produto</h2>
-                    <select>
+                    <select id="select">
                         <option value="">Selecione um produto</option>
                         <option value="mouse">Mouse Genérico (preto) - R$ 15,90</option>
                         <option value="teclado">Teclado Genérico (preto) - R$ 29,90</option>
@@ -31,18 +31,19 @@
                 <div class="amount-box">
                     <h2>Quantidade</h2>
                     <input type="text" id="count-box">
-                    <button type="button" class="adicionar" id="add">Adicionar</button>
-                    <button type="button" class="limpar" id="limpar">Limpar</button>
+                    <button type="button" class="adicionar" id="add" onclick="Adicionar()">Adicionar</button>
+                    <button type="button" class="limpar" id="limpar" onclick="Limpar()">Limpar</button>
                 </div>
             </div>
             <div class="rightside">
                 <div class="products-car">
                     <h2>Produtos no Carrinho</h2>
                 </div>
-                <div class="products-list"></div>
+                <div class="products-list" id="fullBox"></div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
