@@ -10,39 +10,42 @@
 </head>
 
 <body>
-    <div class="container">
+    <main>
+        <div class="container">
 
-        <div class="title">
-            <h1>Carrinho de TI</h1>
-        </div>
+            <div class="title">
+                <h1>Carrinho de TI</h1>
+            </div>
 
-        <div class="car">
-            <div class="leftside">
-                <div class="products-box">
-                    <h2>Produto</h2>
-                    <select>
-                        <option value="">Selecione um produto</option>
-                        <option value="mouse">Mouse Genérico (preto) - R$ 15,90</option>
-                        <option value="teclado">Teclado Genérico (preto) - R$ 29,90</option>
-                        <option value="monitor">Monitor Positivo 19'' - R$ 350,00</option>
-                        <option value="cadeira">Cadeira Gamer Genérico (preto) - R$250,90</option>
-                    </select>
+            <div class="car">
+                <div class="leftside">
+                    <div class="products-box">
+                        <h2>Produto</h2>
+                        <select class="selecionar">
+                            <option value="">Selecione um produto</option>
+                            <option value="Mouse Genérico (preto) - R$ 15,90">Mouse Genérico (preto) - R$ 15,90</option>
+                            <option value="Teclado Genérico (preto) - R$ 29,90">Teclado Genérico (preto) - R$ 29,90</option>
+                            <option value="Monitor Positivo 19'' - R$ 350,00">Monitor Positivo 19'' - R$ 350,00</option>
+                            <option value="Cadeira Gamer Genérico (preto) - R$250,90">Cadeira Gamer Genérico (preto) - R$250,90</option>
+                        </select>
+                    </div>
+                    <div class="amount-box">
+                        <h2>Quantidade</h2>
+                        <input type="text" id="count-box">
+                        <button type="button" class="adicionar" id="add">Adicionar</button>
+                        <button type="button" class="limpar" id="limpar">Limpar</button>
+                    </div>
                 </div>
-                <div class="amount-box">
-                    <h2>Quantidade</h2>
-                    <input type="text" id="count-box">
-                    <button type="button" class="adicionar" id="add">Adicionar</button>
-                    <button type="button" class="limpar" id="limpar">Limpar</button>
+                <div class="rightside">
+                    <div class="products-car">
+                        <h2>Produtos no Carrinho</h2>
+                    </div>
+                    <div class="products-list"></div>
                 </div>
             </div>
-            <div class="rightside">
-                <div class="products-car">
-                    <h2>Produtos no Carrinho</h2>
-                </div>
-                <div class="products-list"></div>
-            </div>
         </div>
-    </div>
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
