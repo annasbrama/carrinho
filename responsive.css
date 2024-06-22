@@ -17,6 +17,10 @@
         padding-bottom: 40px;
     }
 
+    .rightside {
+        min-height: 40vh;
+    }
+
     .products-box select, .amount-box input {
         width: 160px;
         padding: 15px 5px;

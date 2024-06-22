@@ -13,8 +13,9 @@ body {
 }
 
 .container {
-    width: 70%;
-    height: 100%;
+    /* width: 70%; */
+    min-width: 200px;
+    height: 90vh;
     background: #fff;
     border-radius: 14px;
     margin: 10% 15%;
@@ -43,7 +44,7 @@ body {
 }
 
 .leftside, .rightside {
-    min-height: 400px;
+    /* min-height: 400px; */
     padding: 12px;
     position: relative;
     border: 3px solid #2C92F0;
@@ -130,4 +131,13 @@ body {
     text-align: center;
     padding: 15px;
     border-bottom: 2px solid #375BED;
+}
+
+span {
+    display: block;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+    font-size: 15px;
+    font-weight: 800;
 }
