@@ -8,9 +8,9 @@ const select = document.querySelector('#select')
 let arraySelect, product, price
 // console.log(product)
 
-let qtd = [] //quantidades dos produtos
+let qtd; //quantidades dos produtos
 
-let total //soma dos produtos adicionados
+let total = document.querySelector('.total')  //soma dos produtos adicionados
 
 btnAdd.addEventListener('click', () => {
     if (select.value === '') {
@@ -26,26 +26,31 @@ function adicionar() {
     product = arraySelect[0]
     price = arraySelect[1]
 
-    qtd.push(countBox.value)
+    qtd = countBox.value
     // countBox.value = ''
 
-    validateAmount()
-    erro.textContent = ''
-    list.innerHTML = list.innerHTML + '<span>' + qtd + ' ' + product + ' - ' + price + '</span>'
+    if (validateAmount() == true) {
+        erro.textContent = ''
 
-    resetQtd()
+        list.innerHTML = list.innerHTML + '<span>' + qtd + ' ' + product + ' - ' + price + '</span>'
+        list.innerHTML = list.innerHTML + '<h3>' + total + '</h3>'
 
-    productsValue()
+        resetQtd()
+        cartValues()
+
+    } else {
+        return false
+    }
 
 
 }
 
 function validateAmount() {
-    if (countBox.value == '0') {
+    if (countBox.value == 0) {
         erro.textContent = 'ERRO - Insira uma quantidade válida'
-        return true
+        return false
     }
-    return false 
+    return true
 }
 
 function resetQtd() {
@@ -66,7 +71,7 @@ function clean() {
     })
 }
 
-// function productsValue() {
-
-//     total = countBox + (qtd * price)
-// }
+function cartValues() {
+    total = `${qtd} * ${price} + ${qtd} * ${price}`
+    // (qtd * price) + (qtd * price) 
+}
