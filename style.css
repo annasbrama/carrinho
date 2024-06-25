@@ -22,23 +22,21 @@ body {
     margin: 10% 15%;
 }
 
-.title {
+header {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    width: 50%;
     margin: auto;
 }
-
 .title h1 {
     text-align: center;
     font-size: 35px;
     color: #26561D;
     margin-top: 50px;
 }
-.material-symbols-outlined{
+header .material-symbols-outlined{
     text-align: center;
-    font-size: 35px;
+    font-size: 4rem;
     color: #26561D;
     margin-top: 50px;
 }
@@ -139,4 +137,26 @@ button {
     text-align: center;
     padding: 15px;
     border-bottom: 2px solid #407233;
+}
+
+.products-list{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    width: 80%;
+}
+
+li{
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+.total{
+    font-size: 1.5rem;
+    align-self: center;
 }
