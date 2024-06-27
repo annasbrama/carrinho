@@ -3,6 +3,7 @@ document.querySelector('#limpar').addEventListener('click', cleanProducts)
 
 let erro = document.querySelector('.erro')
 const list = document.querySelector('.products-list')
+const result = document.getElementById('finalPrice')
 
 let totalPrice = 0
 let cart = []
@@ -25,7 +26,6 @@ function addProducts() {
         const arraySelect = selectValue.split(' - ')
         const productName = arraySelect[0]
         const productPrice = arraySelect[1]
-        // arraySelect = select.value.split(" - ")
         const productTotal = parseFloat(productPrice) * countBox
 
         cart.push({
@@ -35,22 +35,22 @@ function addProducts() {
             total: productTotal
         })
         totalPrice += productTotal
-        console.log(totalPrice)
         cartList()
     }
 }
 
 function cleanProducts() {
-    cart = []
+    while (cart.length != 0) {
+        cart.pop()
+    }
+    list.innerHTML = ''
     totalPrice = 0
-    addProducts()
-
+    result.innerText = ''
 }
 
 function cartList() {
-    const result = document.getElementById('finalPrice')
 
-    // list.textContent = ''
+    list.textContent = ''
     cart.forEach(item => {
         const h3 = document.createElement('h3')
         h3.textContent = `${item.quantity} x ${item.name} - R$${item.total.toFixed(2)}`
