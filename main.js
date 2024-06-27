@@ -22,7 +22,10 @@ function addProducts() {
         erro.textContent = 'ERRO - Insira uma quantidade válida'
 
     } else if (selectValue && countBox > 0) {
-        const [productName, productPrice] = selectValue.split(' - ')
+        const arraySelect = selectValue.split(' - ')
+        const productName = arraySelect[0]
+        const productPrice = arraySelect[1]
+        // arraySelect = select.value.split(" - ")
         const productTotal = parseFloat(productPrice) * countBox
 
         cart.push({
@@ -32,27 +35,27 @@ function addProducts() {
             total: productTotal
         })
         totalPrice += productTotal
+        console.log(totalPrice)
         cartList()
     }
 }
 
 function cleanProducts() {
-   while (cart != 0) {
-        cart = []
-        totalPrice = 0
-        addProducts()
-   }
+    cart = []
+    totalPrice = 0
+    addProducts()
+
 }
 
 function cartList() {
     const result = document.getElementById('finalPrice')
 
-    list.innerHTML = ''
+    // list.textContent = ''
     cart.forEach(item => {
         const h3 = document.createElement('h3')
         h3.textContent = `${item.quantity} x ${item.name} - R$${item.total.toFixed(2)}`
         list.appendChild(h3)
     });
 
-    result.textContent = `R$${totalPrice.toFixed(2)}`
+    result.innerText = `R$${totalPrice.toFixed(2)}`
 }
